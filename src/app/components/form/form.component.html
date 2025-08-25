@@ -3,15 +3,25 @@
     <h2 class="text-center mb-4">{{h2Text}}</h2>
     <form #f="ngForm" (ngSubmit)="submitHandler(f)">
       <div class="mb-3">
-        <label for="inputUsuario" class="form-label">Usuário</label>
-        <input type="text" class="form-control" id="inputUsuario" placeholder="Digite seu usuário" [(ngModel)]="userName" name="username" minlength="4" required>
+        <mat-form-field hideRequiredMarker appearance="outline" style="width: 100%;">
+          <mat-label>Nome de Usuário</mat-label>
+          <input matInput [(ngModel)]="userName" name="username" minlength="4" required>
+          <mat-hint>Minimo de 4 caracteres</mat-hint>
+        </mat-form-field>
       </div>
       <div class="mb-3">
-        <label for="inputSenha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="inputSenha" placeholder="Digite sua senha" [(ngModel)]="password" name="password" minlength="6" required>
+        <mat-form-field appearance="outline" hideRequiredMarker style="width: 100%;">
+          <mat-label>Senha</mat-label>
+          <input matInput [type]="hide() ? 'password' : 'text'" [(ngModel)]="password" name="password"  minlength="6" required/>
+          <button type="button" mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()">
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-hint>Minimo de 6 caracteres</mat-hint>
+        </mat-form-field>
       </div>
       <a style="text-decoration: none;" routerLink="/login" [queryParams]="{novo_usuario: true}">Novo usuario</a>
-      <button type="submit" class="btn btn-primary w-100" [disabled]="f.invalid" (click)="SnackBarHandler()">{{buttonText}}</button>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="f.invalid">{{buttonText}}</button>
     </form>
   </div>
 </div>

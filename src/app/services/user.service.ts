@@ -14,20 +14,28 @@ export class UserService {
 
   users: User[] = [];
 
+  isLoggin: boolean = false;
+
   authenticateUser(user: User): void {
     this.getAllUser().subscribe({
       next: (response) => {
         this.users = response;
         this.users.forEach(userResponse => {
           if ((userResponse.name === user.name) && (userResponse.password === user.password)) {
-            console.log('Logado');
-          } else {
-            console.log('Passou Aqui');
-          }
+            this.isLoggin = true
+            console.log(user);
+          } 
         });
+        
+        if (this.isLoggin){
+          alert("Logado com Sucesso");
+        }else{
+          alert("Senha ou Usuario errados, tente novamente");
+        }
       },
       error: (error) => {
         console.log(error);
+        alert("Algo de errado aconteceu, tente novamente");
       }
     });
   }
