@@ -4,36 +4,6 @@
       "id": "1",
       "name": "Jefferson",
       "password": "123456"
-    },
-    {
-      "id": "2e21",
-      "name": "yugi",
-      "password": "7890123"
-    },
-    {
-      "id": "d64c",
-      "name": "kaiba",
-      "password": "dragãobrancodeolhosazuis"
-    },
-    {
-      "id": "1d5c",
-      "name": "joey",
-      "password": "senhaqualquer"
-    },
-    {
-      "id": "8aa8",
-      "name": "Matheus",
-      "password": "123456"
-    },
-    {
-      "id": "abf4",
-      "name": "pocoyo",
-      "password": "123456"
-    },
-    {
-      "id": "7e47",
-      "name": "Jeffersons",
-      "password": "123456"
     }
   ]
 }

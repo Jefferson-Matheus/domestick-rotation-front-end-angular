@@ -71,6 +71,7 @@ export class FormComponent implements OnInit {
       password: this.password
     }
     this.service.authenticateUser(user);
+    this.router.navigate(["admin"]);
     
   }
 
