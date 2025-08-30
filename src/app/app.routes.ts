@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { FormComponent } from './components/form/form.component';
 import { MainComponent } from './components/main/main.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { ResponsiblesComponent } from './components/responsibles/responsibles.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,9 @@ export const routes: Routes = [
     },
     {
         path:"admin",
-        component: AdminPanelComponent
+        component: AdminPanelComponent,
+        children: [
+            {path: "responsibles", component: ResponsiblesComponent}
+        ]
     }
 ];

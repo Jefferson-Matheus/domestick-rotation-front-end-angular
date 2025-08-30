@@ -5,5 +5,34 @@
       "name": "Jefferson",
       "password": "123456"
     }
+  ],
+
+  "responsibles": [
+    {
+      "id": 1,
+      "name": "Matheus"
+    },
+    {
+      "id": 2,
+       "name": "Jessica"
+    }
+  ],
+  "domestictask":[
+    {
+      "id": 1,
+      "name": "Lavar a louça",
+      "description": "Lavar a louça de manhã, tarde e de noite",
+      "conclusiondate": "2025-08-30T00:00:00.000Z",
+      "status": 0,
+      "responsibleId": 1
+    },
+      {
+      "id": 2,
+      "name": "Varrer a casa",
+      "description": "Varrer a casa de manha, tarde e de noite",
+      "conclusiondate": "2025-08-30T00:00:00.000Z",
+      "status": 0,
+      "responsibleId": 2
+    }
   ]
 }
