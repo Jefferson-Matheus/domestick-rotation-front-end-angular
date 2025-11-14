@@ -17,7 +17,10 @@ export const routes: Routes = [
         path:"admin",
         component: AdminPanelComponent,
         children: [
-            {path: "responsibles", component: ResponsiblesComponent}
+            {
+                path: "responsibles", 
+                component: ResponsiblesComponent,
+            }
         ]
     }
 ];
