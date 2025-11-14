@@ -17,4 +17,8 @@ export class ResponsibleService {
     
       return responsibles;
   }
+
+  deleteResponsibleById(id:string): Observable<Responsible>{
+    return this.http.delete<Responsible>(`${this.baseUrl}/${id}`);
+  }
 }

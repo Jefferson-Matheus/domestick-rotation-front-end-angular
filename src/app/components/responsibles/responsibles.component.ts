@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterLink} from '@angular/router'
-import {faArrowRotateLeft, faTrash} from '@fortawesome/free-solid-svg-icons'
+import {faArrowRotateLeft, faTrash, faPlus, faEdit} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { CommonModule } from '@angular/common';
 import { ResponsibleService } from '../../services/responsibles/responsible.service';
@@ -23,12 +23,25 @@ export class ResponsiblesComponent implements OnInit {
 
   faArrowRotateLeft = faArrowRotateLeft;
   faTrash = faTrash;
+  faPlush = faPlus;
+  faEdit = faEdit;
 
   getAllResponsibles(){
     this.responsibleService.getAllResponsibles().subscribe({
       next: (response) => {
         console.log(response);
         this.responsibles = response;
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  }
+
+  deleteResponsibleById(id:string){
+    this.responsibleService.deleteResponsibleById(id).subscribe({
+      next: (response) => {
+        this.getAllResponsibles();
       },
       error: (error) => {
         console.log(error);
