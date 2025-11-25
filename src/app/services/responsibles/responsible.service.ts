@@ -10,7 +10,7 @@ export class ResponsibleService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = "http://localhost:3000/responsibles";
+  baseUrl: string = "http://localhost:8080/responsibles";
 
   getAllResponsibles(): Observable<Responsible[]>{
       let responsibles = this.http.get<Responsible[]>(this.baseUrl);
@@ -18,7 +18,7 @@ export class ResponsibleService {
       return responsibles;
   }
 
-  deleteResponsibleById(id:string): Observable<Responsible>{
-    return this.http.delete<Responsible>(`${this.baseUrl}/${id}`);
+  deleteResponsibleById(id:number): Observable<Responsible>{
+    return this.http.delete<Responsible>(`${this.baseUrl}/${id}/delete`);
   }
 }

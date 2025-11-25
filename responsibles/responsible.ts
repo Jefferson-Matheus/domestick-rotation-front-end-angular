@@ -1,4 +1,4 @@
 export interface Responsible{
-    id: string,
+    id: number,
     name: string,
 }

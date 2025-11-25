@@ -38,7 +38,7 @@ export class ResponsiblesComponent implements OnInit {
     });
   }
 
-  deleteResponsibleById(id:string){
+  deleteResponsibleById(id:number){
     this.responsibleService.deleteResponsibleById(id).subscribe({
       next: (response) => {
         this.getAllResponsibles();

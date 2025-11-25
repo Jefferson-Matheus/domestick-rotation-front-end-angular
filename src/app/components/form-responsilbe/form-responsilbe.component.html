@@ -1,1 +1,28 @@
-<p>form-responsilbe works!</p>
+<div class="container my-5" style="max-width: 600px;">
+    <div class="card shadow-sm">
+        <div class="card-body p-5">
+            <h1 class="card-title text-center text-primary mb-4">
+
+            </h1>
+
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome do(a) Responsavel:</label>
+                    <input type="text" class="form-control form-control-lg" id="nome" name="nome" 
+                           value="" 
+                           placeholder="Ex: Matheus" required>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-save me-2"></i>Salvar
+                    </button>
+
+                    <a routerLink="/admin" class="btn btn-outline-secondary">
+                        Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

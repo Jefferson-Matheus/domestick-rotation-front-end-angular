@@ -3,6 +3,7 @@ import { FormComponent } from './components/form/form.component';
 import { MainComponent } from './components/main/main.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ResponsiblesComponent } from './components/responsibles/responsibles.component';
+import { FormResponsilbeComponent } from './components/form-responsilbe/form-responsilbe.component';
 
 export const routes: Routes = [
     {
@@ -19,7 +20,12 @@ export const routes: Routes = [
         children: [
             {
                 path: "responsibles", 
-                component: ResponsiblesComponent,
+                component: ResponsiblesComponent
+            },
+
+            {
+                path: "responsibles/update",
+                component: FormResponsilbeComponent
             }
         ]
     }
